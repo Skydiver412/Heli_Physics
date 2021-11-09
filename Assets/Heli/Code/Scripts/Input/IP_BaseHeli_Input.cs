@@ -8,8 +8,8 @@ namespace IndiePixel
     {
         #region Variables
         [Header("Base Input Properties")]
-        public float vertical = 0f;
-        public float horizontal = 0f;
+        protected float vertical = 0f;
+        protected float horizontal = 0f;
         #endregion
 
         #region Built-in
