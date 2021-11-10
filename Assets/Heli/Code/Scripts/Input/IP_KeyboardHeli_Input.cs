@@ -12,25 +12,31 @@ namespace IndiePixel
         #endregion
 
         #region Properties
-        private float throttleInput = 0f;
-        public float ThrottleInput
+        protected float rawThrottleInput = 0f;
+        public float RawThrottleInput
         {
-            get { return throttleInput; }
+            get { return rawThrottleInput; }
         }
 
-        private float collectiveInput = 0f;
+        protected float stickyThrottle = 0f;
+        public float StickyThrottle
+        {
+            get { return stickyThrottle; }
+        }
+
+        protected float collectiveInput = 0f;
         public float CollectiveInput
         {
             get { return collectiveInput; }
         }
 
-        private Vector2 cyclicInput = Vector2.zero;
+        protected Vector2 cyclicInput = Vector2.zero;
         public Vector2 CyclicInput
         {
             get { return cyclicInput; }
         }
 
-        private float pedalInput = 0f;
+        protected float pedalInput = 0f;
         public float PedalInput
         {
             get { return pedalInput; }
@@ -47,33 +53,51 @@ namespace IndiePixel
         {
             base.HandleInputs();
 
+            // Input Methods
             HandleThrottle();
             HandleCollective();
             HandleCyclic();
             HandlePedal();
-            
+
+            // Utility Methods
+            ClampInputs();
+            HandleStickyThrottle();
         }
 
-        void HandleCyclic()
+        protected virtual void HandleThrottle()
+        {
+            rawThrottleInput = Input.GetAxis("Throttle");
+        }
+
+        protected virtual void HandleCyclic()
         {
             cyclicInput.y = vertical;
             cyclicInput.x = horizontal;
         }
 
-        void HandleCollective()
+        protected virtual void HandleCollective()
         {
-            
+            collectiveInput = Input.GetAxis("Collective");
         }
 
-        void HandleThrottle()
+        protected virtual void HandlePedal()
         {
-            
+            pedalInput = Input.GetAxis("Pedal");
         }
 
-
-        void HandlePedal()
+        protected void ClampInputs()
         {
-           
+            rawThrottleInput = Mathf.Clamp(rawThrottleInput, -1f, 1f);
+            collectiveInput = Mathf.Clamp(collectiveInput, -1f, 1f);
+            cyclicInput = Vector2.ClampMagnitude(cyclicInput, 1);
+            pedalInput = Mathf.Clamp(pedalInput, -1f, 1f);
+        }
+
+        protected void HandleStickyThrottle()
+        {
+            stickyThrottle += RawThrottleInput * Time.deltaTime;
+            stickyThrottle = Mathf.Clamp01(stickyThrottle);
+            //Debug.Log(stickyThrottle);
         }
         #endregion
     }

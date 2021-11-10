@@ -27,6 +27,8 @@ namespace IndiePixel
             vertical = Input.GetAxis("Vertical");
             horizontal = Input.GetAxis("Horizontal");
         }
+
+        
         #endregion
     }
 }
