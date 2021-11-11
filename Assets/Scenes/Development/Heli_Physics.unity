@@ -658,6 +658,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2121518175, guid: d205fb0079c394b7d9631cf5ceb77fc0, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6777356994378719627, guid: d205fb0079c394b7d9631cf5ceb77fc0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -722,6 +726,11 @@ PrefabInstance:
         type: 3}
       propertyPath: tailForce
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8108760347411210570, guid: d205fb0079c394b7d9631cf5ceb77fc0,
+        type: 3}
+      propertyPath: autoLevelForce
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d205fb0079c394b7d9631cf5ceb77fc0, type: 3}
