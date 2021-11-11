@@ -25,7 +25,7 @@ namespace IndiePixel
         {
             //Debug.Log("Updating Rotor Controller");
             // Degrees per sec calculation
-            float dps = (currentRPMs * 360f) / 60f * Time.deltaTime;
+            float dps = ((currentRPMs * 360f) / 60f);
 
             // Update our rotors
             if(rotors.Count > 0)

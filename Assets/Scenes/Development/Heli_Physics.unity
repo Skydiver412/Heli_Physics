@@ -175,7 +175,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 170076733}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 3, z: -17.26}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -323,8 +323,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: 0.06070315, y: -0.9093376, z: 0.14301871, w: 0.38596117}
+  m_LocalPosition: {x: 5.6429915, y: 3.5600343, z: 5.376462}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -651,7 +651,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1798564022}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &760732306057857358
+--- !u!1001 &5861061568181241557
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -666,7 +666,7 @@ PrefabInstance:
     - target: {fileID: 6777356994378719627, guid: d205fb0079c394b7d9631cf5ceb77fc0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.011
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6777356994378719627, guid: d205fb0079c394b7d9631cf5ceb77fc0,
         type: 3}
@@ -718,145 +718,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: R22_GRP
       objectReference: {fileID: 0}
-    - target: {fileID: 8875888686257253309, guid: d205fb0079c394b7d9631cf5ceb77fc0,
-        type: 3}
-      propertyPath: blurTextures.Array.size
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8875888686257253309, guid: d205fb0079c394b7d9631cf5ceb77fc0,
-        type: 3}
-      propertyPath: blades.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8875888686257253309, guid: d205fb0079c394b7d9631cf5ceb77fc0,
-        type: 3}
-      propertyPath: blurTextures.Array.data[0]
-      value: 
-      objectReference: {fileID: 2800000, guid: fbbf55dfa1024e245badd246696f6cfa, type: 3}
-    - target: {fileID: 8875888686257253309, guid: d205fb0079c394b7d9631cf5ceb77fc0,
-        type: 3}
-      propertyPath: blurTextures.Array.data[1]
-      value: 
-      objectReference: {fileID: 2800000, guid: c981b2c180599d644a9c432b09196a4f, type: 3}
-    - target: {fileID: 8875888686257253309, guid: d205fb0079c394b7d9631cf5ceb77fc0,
-        type: 3}
-      propertyPath: blurTextures.Array.data[2]
-      value: 
-      objectReference: {fileID: 2800000, guid: bc755d4c6ef365945a15b26dbc14bce1, type: 3}
-    - target: {fileID: 8875888686257253309, guid: d205fb0079c394b7d9631cf5ceb77fc0,
-        type: 3}
-      propertyPath: blurTextures.Array.data[3]
-      value: 
-      objectReference: {fileID: 2800000, guid: 8a5e73e576912554a9a6e0f2534c7567, type: 3}
-    - target: {fileID: 8875888686257253309, guid: d205fb0079c394b7d9631cf5ceb77fc0,
-        type: 3}
-      propertyPath: blurTextures.Array.data[4]
-      value: 
-      objectReference: {fileID: 2800000, guid: 8a6f2a277c8266248b48ace30a57a3b8, type: 3}
-    - target: {fileID: 8875888686257253309, guid: d205fb0079c394b7d9631cf5ceb77fc0,
-        type: 3}
-      propertyPath: blurTextures.Array.data[5]
-      value: 
-      objectReference: {fileID: 2800000, guid: 22296aaa2494fb64ca453e13c3ad4459, type: 3}
-    - target: {fileID: 8875888686257253309, guid: d205fb0079c394b7d9631cf5ceb77fc0,
-        type: 3}
-      propertyPath: blurTextures.Array.data[6]
-      value: 
-      objectReference: {fileID: 2800000, guid: 6dc3e3449e0eed949a13e1e5bc062a26, type: 3}
-    - target: {fileID: 8875888686257253309, guid: d205fb0079c394b7d9631cf5ceb77fc0,
-        type: 3}
-      propertyPath: blurTextures.Array.data[7]
-      value: 
-      objectReference: {fileID: 2800000, guid: ed3134fc98a404a41aed092e53506785, type: 3}
-    - target: {fileID: 8875888686257253309, guid: d205fb0079c394b7d9631cf5ceb77fc0,
-        type: 3}
-      propertyPath: blurTextures.Array.data[8]
-      value: 
-      objectReference: {fileID: 2800000, guid: 7068257164979f64fa4e07d401476b4f, type: 3}
-    - target: {fileID: 8875888686257253309, guid: d205fb0079c394b7d9631cf5ceb77fc0,
-        type: 3}
-      propertyPath: blurTextures.Array.data[9]
-      value: 
-      objectReference: {fileID: 2800000, guid: 52c95cced04f28141b39f5ea47ad81dc, type: 3}
-    - target: {fileID: 8875888686257253309, guid: d205fb0079c394b7d9631cf5ceb77fc0,
-        type: 3}
-      propertyPath: blades.Array.data[0]
-      value: 
-      objectReference: {fileID: 8377762315453944160}
-    - target: {fileID: 8875888686257253309, guid: d205fb0079c394b7d9631cf5ceb77fc0,
-        type: 3}
-      propertyPath: blades.Array.data[1]
-      value: 
-      objectReference: {fileID: 8377489736792218586}
-    - target: {fileID: 8875888686257253309, guid: d205fb0079c394b7d9631cf5ceb77fc0,
-        type: 3}
-      propertyPath: blurMat
-      value: 
-      objectReference: {fileID: 2100000, guid: 7107586acaaa1684882bebd97b029778, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d205fb0079c394b7d9631cf5ceb77fc0, type: 3}
---- !u!1 &8377366404619605396 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8377366404619605396, guid: d205fb0079c394b7d9631cf5ceb77fc0,
-    type: 3}
-  m_PrefabInstance: {fileID: 760732306057857358}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &8377467687089984408 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8377467687089984408, guid: d205fb0079c394b7d9631cf5ceb77fc0,
-    type: 3}
-  m_PrefabInstance: {fileID: 760732306057857358}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &8377489736792218586 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8377489736792218586, guid: d205fb0079c394b7d9631cf5ceb77fc0,
-    type: 3}
-  m_PrefabInstance: {fileID: 760732306057857358}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &8377762315453944160 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8377762315453944160, guid: d205fb0079c394b7d9631cf5ceb77fc0,
-    type: 3}
-  m_PrefabInstance: {fileID: 760732306057857358}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &8378151843595795228 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8378151843595795228, guid: d205fb0079c394b7d9631cf5ceb77fc0,
-    type: 3}
-  m_PrefabInstance: {fileID: 760732306057857358}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &8378219074802295190 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8378219074802295190, guid: d205fb0079c394b7d9631cf5ceb77fc0,
-    type: 3}
-  m_PrefabInstance: {fileID: 760732306057857358}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &8378219074802295192
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8378219074802295190}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 181d715de4c3b46c185a7a8062a00450, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxDps: 1000
-  blades:
-  - {fileID: 8377467687089984408}
-  - {fileID: 8377366404619605396}
-  blurGeo: {fileID: 8378151843595795228}
-  blurTextures:
-  - {fileID: 2800000, guid: b386a4b52fdf20c419e016d8bfc38328, type: 3}
-  - {fileID: 2800000, guid: 9d7b5e314a8e4674f840038e26aa9dc4, type: 3}
-  - {fileID: 2800000, guid: 982d2602a8a3b2d4db18a4c84bfbda55, type: 3}
-  - {fileID: 2800000, guid: 100c599a2d97c044e8ec80deab3820ea, type: 3}
-  - {fileID: 2800000, guid: f3d6503afda2cbb4eb78aa34a0b0204d, type: 3}
-  - {fileID: 2800000, guid: db0d2d5bf8c3eed44940add47cc29740, type: 3}
-  - {fileID: 2800000, guid: d4ebdebcff4d59a47a1c634ea0edb29e, type: 3}
-  - {fileID: 2800000, guid: e7c3198a01922d240b128a02f16b0f73, type: 3}
-  - {fileID: 2800000, guid: fd5bdfd071ee2674399772bd38828c4d, type: 3}
-  - {fileID: 2800000, guid: 1c739f0df37149547b83ee86f1b71ab5, type: 3}
-  blurMat: {fileID: 0}
