@@ -539,11 +539,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6777356994378719627}
-  - component: {fileID: 2121518175}
   - component: {fileID: 1362842951}
+  - component: {fileID: 4665331251449407155}
+  - component: {fileID: 8108760347411210570}
   - component: {fileID: 1362842947}
   - component: {fileID: 1362842950}
-  - component: {fileID: 4665331251449407155}
+  - component: {fileID: 2121518175}
   m_Layer: 0
   m_Name: R22_GRP
   m_TagString: Untagged
@@ -571,22 +572,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &2121518175
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7069769726775219752}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &1362842951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -600,6 +585,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputType: 0
+--- !u!114 &4665331251449407155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7069769726775219752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f33098898327648baafffe5d8d3bcd0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weightInLbs: 1200
+  cog: {fileID: 1289905810580937494}
+  engines:
+  - {fileID: 8218914636444074770}
+  rototCtrl: {fileID: 3185479091611179714}
+--- !u!114 &8108760347411210570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7069769726775219752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c122f85c64e79448a87a8dd29735ccb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxLiftForce: 5
+  mainRotor: {fileID: 8376825237488382947}
+  tailForce: 1000
 --- !u!114 &1362842947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -624,23 +641,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aba44eb32a784a5e818369086920d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4665331251449407155
-MonoBehaviour:
+--- !u!54 &2121518175
+Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7069769726775219752}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f33098898327648baafffe5d8d3bcd0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weightInLbs: 10
-  cog: {fileID: 1289905810580937494}
-  engines:
-  - {fileID: 8218914636444074770}
-  rototCtrl: {fileID: 3185479091611179714}
+  serializedVersion: 2
+  m_Mass: 544.8
+  m_Drag: 1
+  m_AngularDrag: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &7832673420137947019
 GameObject:
   m_ObjectHideFlags: 0
@@ -1002,6 +1018,8 @@ MonoBehaviour:
   lRotor: {fileID: 8379299982778388488}
   rRotor: {fileID: 8383257588450931400}
   maxPitch: 25
+  radius: 2
+  cyclicVal: {x: 0, y: 0}
 --- !u!114 &8724961184739964252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1153,6 +1171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5da7003dc89c4ee5bbeb0af7ef061a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxDps: 3000
 --- !u!1 &8376862220024110784
 GameObject:
   m_ObjectHideFlags: 0

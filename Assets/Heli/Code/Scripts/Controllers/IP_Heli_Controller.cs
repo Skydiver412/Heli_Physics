@@ -18,6 +18,15 @@ namespace IndiePixel
         public IP_Heli_Rotor_Controller rototCtrl;
 
         private IP_Input_Controller input;
+        private IP_Heli_Characteristics characteristics;
+        #endregion
+
+        #region Built-in Methods
+        public override void Start()
+        {
+            base.Start();
+            characteristics = GetComponent<IP_Heli_Characteristics>();
+        }
         #endregion
 
         #region
@@ -57,7 +66,10 @@ namespace IndiePixel
 
         protected virtual void HandleCharacteristics()
         {
-
+            if (characteristics)
+            {
+                characteristics.UpdateCharacteristics(rb, input);
+            }
         }
         #endregion
     }

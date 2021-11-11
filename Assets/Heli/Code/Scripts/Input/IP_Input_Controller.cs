@@ -40,6 +40,12 @@ namespace IndiePixel
             get { return collectiveInput; }
         }
 
+        private float stickyCollectiveInput;
+        public float StickyCollectiveInput
+        {
+            get { return stickyCollectiveInput; }
+        }
+
         private Vector2 cyclicInput;
         public Vector2 CyclicInput
         {
@@ -75,6 +81,7 @@ namespace IndiePixel
                     case InputType.Keyboard:
                         throttleInput = keyInput.RawThrottleInput;
                         collectiveInput = keyInput.CollectiveInput;
+                        stickyCollectiveInput = keyInput.StickyCollectiveInput;
                         cyclicInput = keyInput.CyclicInput;
                         pedalInput = keyInput.PedalInput;
                         stickyThrottle = keyInput.StickyThrottle;
@@ -83,6 +90,7 @@ namespace IndiePixel
                     case InputType.Xbox:
                         throttleInput = xboxInput.RawThrottleInput;
                         collectiveInput = xboxInput.CollectiveInput;
+                        stickyCollectiveInput = xboxInput.StickyCollectiveInput;
                         cyclicInput = xboxInput.CyclicInput;
                         pedalInput = xboxInput.PedalInput;
                         stickyThrottle = xboxInput.StickyThrottle;

@@ -8,6 +8,7 @@ namespace IndiePixel
     public class IP_Heli_Rotor_Controller : MonoBehaviour
     {
         #region
+        public float maxDps = 3000f;
         private List<IP_IHeliRotor> rotors;
         #endregion
 
@@ -26,6 +27,7 @@ namespace IndiePixel
             //Debug.Log("Updating Rotor Controller");
             // Degrees per sec calculation
             float dps = ((currentRPMs * 360f) / 60f);
+            dps = Mathf.Clamp(dps, 0f, maxDps);
 
             // Update our rotors
             if(rotors.Count > 0)

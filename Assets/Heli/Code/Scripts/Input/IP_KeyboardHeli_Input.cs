@@ -30,6 +30,13 @@ namespace IndiePixel
             get { return collectiveInput; }
         }
 
+        protected float stickyCollectiveInput = 0f;
+        public float StickyCollectiveInput
+        {
+            get { return stickyCollectiveInput; }
+        }
+
+
         protected Vector2 cyclicInput = Vector2.zero;
         public Vector2 CyclicInput
         {
@@ -62,6 +69,7 @@ namespace IndiePixel
             // Utility Methods
             ClampInputs();
             HandleStickyThrottle();
+            HandleStickyCollective();
         }
 
         protected virtual void HandleThrottle()
@@ -98,6 +106,13 @@ namespace IndiePixel
             stickyThrottle += RawThrottleInput * Time.deltaTime;
             stickyThrottle = Mathf.Clamp01(stickyThrottle);
             //Debug.Log(stickyThrottle);
+        }
+
+        protected void HandleStickyCollective()
+        {
+            stickyCollectiveInput += collectiveInput * Time.deltaTime;
+            stickyCollectiveInput = Mathf.Clamp01(stickyCollectiveInput);
+            //Debug.Log(stickyCollectiveInput);
         }
         #endregion
     }
