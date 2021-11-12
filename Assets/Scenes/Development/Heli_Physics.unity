@@ -44,7 +44,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -88,7 +88,8 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 4ba889d2b5f17409cba004998172e64d,
+    type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
@@ -145,7 +146,7 @@ Light:
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -166,7 +167,7 @@ Light:
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
-  m_ShadowAngle: 0
+  m_ShadowAngle: 7.78
 --- !u!4 &170076735
 Transform:
   m_ObjectHideFlags: 0
@@ -259,6 +260,8 @@ GameObject:
   - component: {fileID: 534669904}
   - component: {fileID: 534669903}
   - component: {fileID: 534669906}
+  - component: {fileID: 534669907}
+  - component: {fileID: 534669908}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -296,7 +299,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.1
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -390,6 +393,40 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!114 &534669907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534669902}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33317f4a4643d407592e5eefdde2dd3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 1515524276}
+  lookAtTarget: {fileID: 2105752801}
+  height: 10
+  distance: 20
+  smoothSpeed: 0.5
+--- !u!114 &534669908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534669902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff505b3143b234683ab52bf3b2e5583a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 1515524276}
+  lookAtTarget: {fileID: 2105752801}
+  height: 2
+  minDistance: 4
+  maxDistance: 8
 --- !u!1 &635164812
 GameObject:
   m_ObjectHideFlags: 0
@@ -481,6 +518,12 @@ Transform:
   m_Father: {fileID: 243315396}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1515524276 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 2121518175, guid: d205fb0079c394b7d9631cf5ceb77fc0,
+    type: 3}
+  m_PrefabInstance: {fileID: 5861061568181241557}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1726856028
 GameObject:
   m_ObjectHideFlags: 0
@@ -651,6 +694,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1798564022}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &2105752801 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2105752801, guid: d205fb0079c394b7d9631cf5ceb77fc0,
+    type: 3}
+  m_PrefabInstance: {fileID: 5861061568181241557}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5861061568181241557
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -658,9 +707,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2121518175, guid: d205fb0079c394b7d9631cf5ceb77fc0, type: 3}
-      propertyPath: m_UseGravity
-      value: 1
+    - target: {fileID: 1289905810580937494, guid: d205fb0079c394b7d9631cf5ceb77fc0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.66
       objectReference: {fileID: 0}
     - target: {fileID: 6777356994378719627, guid: d205fb0079c394b7d9631cf5ceb77fc0,
         type: 3}
@@ -721,16 +771,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: R22_GRP
-      objectReference: {fileID: 0}
-    - target: {fileID: 8108760347411210570, guid: d205fb0079c394b7d9631cf5ceb77fc0,
-        type: 3}
-      propertyPath: tailForce
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8108760347411210570, guid: d205fb0079c394b7d9631cf5ceb77fc0,
-        type: 3}
-      propertyPath: autoLevelForce
-      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d205fb0079c394b7d9631cf5ceb77fc0, type: 3}
