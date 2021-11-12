@@ -9,6 +9,8 @@ namespace IndiePixel
     public class IP_KeyboardHeli_Input : IP_BaseHeli_Input
     {
         #region Variables
+        [Header("Camera Input Properties")]
+        public KeyCode camButton = KeyCode.C;
         #endregion
 
         #region Properties
@@ -48,6 +50,12 @@ namespace IndiePixel
         {
             get { return pedalInput; }
         }
+
+        protected bool camInput = false;
+        public bool CamInput
+        {
+            get { return camInput; }
+        }
         #endregion
 
         #region Built-in 
@@ -65,6 +73,7 @@ namespace IndiePixel
             HandleCollective();
             HandleCyclic();
             HandlePedal();
+            HandleCamBtn();
 
             // Utility Methods
             ClampInputs();
@@ -91,6 +100,12 @@ namespace IndiePixel
         protected virtual void HandlePedal()
         {
             pedalInput = Input.GetAxis("Pedal");
+        }
+
+        protected virtual void HandleCamBtn()
+        {
+            camInput = Input.GetKeyDown(camButton);
+            //Debug.Log(camInput);
         }
 
         protected void ClampInputs()

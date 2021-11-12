@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Events;
 
 namespace IndiePixel
 {
@@ -17,6 +17,9 @@ namespace IndiePixel
         #region Variables
         [Header("Input Properties")]
         public InputType inputType = InputType.Keyboard;
+
+        [Header("Input Events")]
+        public UnityEvent onCamButtonPressed = new UnityEvent();
 
         
         private IP_KeyboardHeli_Input keyInput;
@@ -57,6 +60,12 @@ namespace IndiePixel
         {
             get { return pedalInput; }
         }
+
+        private bool camInput;
+        public bool CamInput
+        {
+            get { return camInput; }
+        }
         #endregion
 
         #region
@@ -85,6 +94,7 @@ namespace IndiePixel
                         cyclicInput = keyInput.CyclicInput;
                         pedalInput = keyInput.PedalInput;
                         stickyThrottle = keyInput.StickyThrottle;
+                        camInput = keyInput.CamInput;
                         break;
 
                     case InputType.Xbox:
@@ -94,9 +104,15 @@ namespace IndiePixel
                         cyclicInput = xboxInput.CyclicInput;
                         pedalInput = xboxInput.PedalInput;
                         stickyThrottle = xboxInput.StickyThrottle;
+                        camInput = xboxInput.CamInput;
                         break;
                     default:
                         break;
+                }
+
+                if (camInput)
+                {
+                    onCamButtonPressed.Invoke();
                 }
             }
         }

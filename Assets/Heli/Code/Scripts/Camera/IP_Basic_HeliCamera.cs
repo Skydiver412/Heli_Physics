@@ -16,7 +16,7 @@ namespace IndiePixel
         #endregion
 
         #region
-        private void Start()
+        private void OnEnable()
         {
             updateEvent.AddListener(UpdateCamera);
         }
@@ -32,6 +32,7 @@ namespace IndiePixel
         public void UpdateCamera()
         {
             // Wanted position
+            targetFlatFwd = targetFlatFwd.normalized;
             wantedPos = rb.position + (targetFlatFwd * distance) + (Vector3.up * height);
 
             // Position the camera

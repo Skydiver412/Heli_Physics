@@ -23,7 +23,7 @@ namespace IndiePixel
         #endregion
 
         #region Built-in
-        void Start()
+        void OnEnable()
         {
             updateEvent.AddListener(UpdateCamera);
         }

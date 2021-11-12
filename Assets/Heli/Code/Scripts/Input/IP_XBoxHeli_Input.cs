@@ -33,6 +33,11 @@ namespace IndiePixel
         {
             pedalInput = Input.GetAxis("XboxPedal");
         }
+
+        protected override void HandleCamBtn()
+        {
+            camInput = Input.GetButtonDown("XboxCamBtn");
+        }
         #endregion
     }
 }
